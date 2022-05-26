@@ -11,9 +11,7 @@ class DataManager {
     
     static let shared = DataManager()
     
-    private init() {}
-    
-    let names = [
+    let firstNames = [
     "Bruce", "Sharon",
     "Carl", "Allan",
     "Nicola", "Steven",
@@ -21,7 +19,7 @@ class DataManager {
     "Tim", "Jack"
     ]
     
-    let surnames = [
+    let sureNames = [
     "Black", "Smith",
     "Butler", "Dow",
     "Pennyworth", "Williams",
@@ -37,12 +35,14 @@ class DataManager {
         "6543007193", "0192837465"
     ]
     
-    let emails = [
+    let emailsLists = [
         "bruce@ya.ru", "sharon@gmail.com",
         "carl@mir.ru", "allan@boss.org",
         "nicola@yard.ru", "steven@parent.ru",
         "ted@apple.com", "aaron@usa.com",
         "tim@ru.ru", "jack@world.org"
     ]
+    
+    private init() {}
     
 }
