@@ -12,19 +12,19 @@ class DataManager {
     static let shared = DataManager()
     
     let firstNames = [
-    "Bruce", "Sharon",
-    "Carl", "Allan",
-    "Nicola", "Steven",
-    "Ted", "Aaron",
-    "Tim", "Jack"
+        "Andy", "Denice",
+        "Ivan", "Jane",
+        "Kate", "Mark",
+        "Natasha", "Opri",
+        "Roman", "Zoi"
     ]
     
     let sureNames = [
-    "Black", "Smith",
-    "Butler", "Dow",
-    "Pennyworth", "Williams",
-    "Jankin", "Robertson",
-    "Murphy", "Jennies"
+        "Vizard", "Degru",
+        "Markin", "Komi",
+        "Blue", "Guro",
+        "Potamkina", "Halo",
+        "Hugo", "Malkina"
     ]
     
     let phoneNumbers = [
@@ -36,11 +36,19 @@ class DataManager {
     ]
     
     let emailsLists = [
-        "bruce@ya.ru", "sharon@gmail.com",
-        "carl@mir.ru", "allan@boss.org",
-        "nicola@yard.ru", "steven@parent.ru",
-        "ted@apple.com", "aaron@usa.com",
-        "tim@ru.ru", "jack@world.org"
+        "andy@ya.ru", "denice@gmail.com",
+        "ivan@mir.ru", "jane@boss.org",
+        "kate@yard.ru", "mark@parent.ru",
+        "natasha@apple.com", "opri@usa.com",
+        "roman@ru.ru", "zoi@world.org"
+    ]
+    
+    let images = [
+    "Andy Vizard", "Denice Degru",
+    "Ivan Markin", "Jane Komi",
+    "Kate Blue", "Mark Guro",
+    "Natasha Potamkina", "Opri Halo",
+    "Roman Hugo", "Zoi Malkina"
     ]
     
     private init() {}

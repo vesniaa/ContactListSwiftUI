@@ -2,43 +2,50 @@
 //  Person.swift
 //  ContactListSwiftUI
 //
-//  Created by Евгения Аникина on 26.05.2022.
+//  Created by Евгения Аникина on 27.05.2022.
 //
 
 import Foundation
 
-struct Person: Hashable {
+struct Person: Identifiable {
     
-    let firstNames: String
-    let sureNames: String
-    let phoneNumbers: String
-    let emailLists: String
+    let id: Int
+    let name: String
+    let image: String
+    let surname: String
+    let phone: String
+    let email: String
     
     var fullName: String {
-        "\(firstNames) \(sureNames)"
+        "\(name) \(surname)"
     }
     
-    var rows: [String] {
-     [phoneNumbers, emailLists]
-    }
-    
-    static func getPersons() -> [Person] {
+    static func getContactList() -> [Person] {
+        
         var persons: [Person] = []
         
-        let firstName = DataManager.shared.firstNames.shuffled()
-        let sureName = DataManager.shared.sureNames.shuffled()
-        let phoneNumber = DataManager.shared.phoneNumbers.shuffled()
-        let emailList = DataManager.shared.emailsLists.shuffled()
+        let names = DataManager.shared.firstNames.shuffled()
+        let images = DataManager.shared.images.shuffled()
+        let surnames = DataManager.shared.sureNames.shuffled()
+        let phones = DataManager.shared.phoneNumbers.shuffled()
+        let emails = DataManager.shared.emailsLists.shuffled()
         
-        for index in 0..<firstName.count {
+        let iterationCount = min(names.count, surnames.count, phones.count, emails.count)
+        
+        for index in 0..<iterationCount {
             let person = Person(
-                firstNames: firstName[index],
-                sureNames: sureName[index],
-                phoneNumbers: phoneNumber[index],
-                emailLists: emailList[index]
+                id: index + 1,
+                name: names[index],
+                image: images[index],
+                surname: surnames[index],
+                phone: phones[index],
+                email: emails[index]
             )
+            
             persons.append(person)
         }
+        
         return persons
     }
 }
+
