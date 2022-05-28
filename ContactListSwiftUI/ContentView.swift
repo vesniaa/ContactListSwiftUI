@@ -20,7 +20,7 @@ struct ContentView: View {
                 }
             SectionsList(contacts: contacts)
                 .tabItem {
-                    Image(systemName: "phone")
+                    Image(systemName: "phone.fill")
                     Text("Numbers")
                 }
         }
@@ -32,3 +32,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

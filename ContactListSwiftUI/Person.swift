@@ -11,7 +11,7 @@ struct Person: Identifiable {
     
     let id: Int
     let name: String
-    let image: String
+    let image: String?
     let surname: String
     let phone: String
     let email: String
@@ -25,7 +25,6 @@ struct Person: Identifiable {
         var persons: [Person] = []
         
         let names = DataManager.shared.firstNames.shuffled()
-        let images = DataManager.shared.images.shuffled()
         let surnames = DataManager.shared.sureNames.shuffled()
         let phones = DataManager.shared.phoneNumbers.shuffled()
         let emails = DataManager.shared.emailsLists.shuffled()
@@ -36,7 +35,7 @@ struct Person: Identifiable {
             let person = Person(
                 id: index + 1,
                 name: names[index],
-                image: images[index],
+                image: "\(names[index])_\(surnames[index])",
                 surname: surnames[index],
                 phone: phones[index],
                 email: emails[index]
